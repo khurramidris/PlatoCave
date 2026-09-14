@@ -1,0 +1,2067 @@
+{
+  "schema_version": 1,
+  "baseline_date": "2026-09-14",
+  "method": "static source inventory, not runtime validation",
+  "engines": [
+    {
+      "id": "agentsociety2",
+      "repository": "https://github.com/khurramidris/AgentSociety.git",
+      "commit": "670c94fff7c64c4f79b632125f2ccf968155e746",
+      "verification": "clean pinned source; no engine execution performed",
+      "api_routes": [
+        {
+          "method": "GET",
+          "path": "/",
+          "handler": "root",
+          "source": "packages/agentsociety2/agentsociety2/backend/app.py",
+          "line": 121
+        },
+        {
+          "method": "GET",
+          "path": "/health",
+          "handler": "health_check",
+          "source": "packages/agentsociety2/agentsociety2/backend/app.py",
+          "line": 139
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/agent-skills/create",
+          "handler": "create_skill",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 210
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/agent-skills/import",
+          "handler": "import_skill",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 174
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent-skills/list",
+          "handler": "list_skills",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 148
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/agent-skills/scan",
+          "handler": "scan_custom_skills",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 159
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/agent-skills/upload",
+          "handler": "upload_skill",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 257
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/agent-skills/{skill_id}/info",
+          "handler": "get_skill_info",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/agent_skills.py",
+          "line": 304
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/custom/classes",
+          "handler": "list_available_classes",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 544
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/custom/clean",
+          "handler": "clean_custom_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 214
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/custom/list",
+          "handler": "list_custom_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 403
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/custom/rescan",
+          "handler": "rescan_custom_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 655
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/custom/scan",
+          "handler": "scan_custom_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 138
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/custom/status",
+          "handler": "get_custom_modules_status",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 484
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/custom/test",
+          "handler": "test_custom_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/custom.py",
+          "line": 251
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/experiments/{hypothesis_id}/{experiment_id}/artifacts",
+          "handler": "list_artifacts",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/experiments.py",
+          "line": 194
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/experiments/{hypothesis_id}/{experiment_id}/artifacts/{artifact_name}",
+          "handler": "get_artifact",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/experiments.py",
+          "line": 224
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/experiments/{hypothesis_id}/{experiment_id}/info",
+          "handler": "get_experiment_info",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/experiments.py",
+          "line": 137
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/modules/agent_classes",
+          "handler": "get_agent_classes",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/modules.py",
+          "line": 68
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/modules/all",
+          "handler": "get_all_modules",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/modules.py",
+          "line": 178
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/modules/env_module_classes",
+          "handler": "get_env_module_classes",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/modules.py",
+          "line": 123
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/prefill-params",
+          "handler": "get_prefill_params",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/prefill_params.py",
+          "line": 50
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/prefill-params/{class_kind}/{class_name}",
+          "handler": "get_class_prefill_params",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/prefill_params.py",
+          "line": 79
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/agents/profiles",
+          "handler": "get_agent_profiles",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 694
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/datasets",
+          "handler": "get_replay_datasets",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 456
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/datasets/{dataset_id}",
+          "handler": "get_replay_dataset",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 474
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/datasets/{dataset_id}/rows",
+          "handler": "get_replay_dataset_rows",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 491
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/info",
+          "handler": "get_experiment_info",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 431
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/panel-schema",
+          "handler": "get_replay_panel_schema",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 544
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/steps/{step}/bundle",
+          "handler": "get_replay_step_bundle",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 587
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/replay/{hypothesis_id}/{experiment_id}/timeline",
+          "handler": "get_timeline",
+          "source": "packages/agentsociety2/agentsociety2/backend/routers/replay.py",
+          "line": 653
+        }
+      ],
+      "environment_classes": [
+        {
+          "name": "CommonsTragedyEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/commons_tragedy.py"
+        },
+        {
+          "name": "EconomySpace",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/economy_space.py"
+        },
+        {
+          "name": "EndowmentEffectEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/endowment_effect.py"
+        },
+        {
+          "name": "EventSpace",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/event_space/environment.py"
+        },
+        {
+          "name": "GlobalInformationEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/global_information.py"
+        },
+        {
+          "name": "ImplicitAssociationTestEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/implicit_association_test.py"
+        },
+        {
+          "name": "MobilitySpace",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/mobility_space/environment.py"
+        },
+        {
+          "name": "PrisonersDilemmaEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/prisoners_dilemma.py"
+        },
+        {
+          "name": "PublicGoodsEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/public_goods.py"
+        },
+        {
+          "name": "ReputationGameEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/reputation_game.py"
+        },
+        {
+          "name": "SelfEnhancementEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/self_enhancement.py"
+        },
+        {
+          "name": "SelfReferenceEffectEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/self_reference_effect.py"
+        },
+        {
+          "name": "SimpleSocialSpace",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/simple_social_space.py"
+        },
+        {
+          "name": "SocialMediaSpace",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/social_media/social_media_space.py"
+        },
+        {
+          "name": "TrustGameEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/trust_game.py"
+        },
+        {
+          "name": "VolunteerDilemmaEnv",
+          "source": "packages/agentsociety2/agentsociety2/contrib/env/volunteer_dilemma.py"
+        }
+      ],
+      "router_sources": [
+        "packages/agentsociety2/agentsociety2/env/router_base.py",
+        "packages/agentsociety2/agentsociety2/env/router_codegen.py",
+        "packages/agentsociety2/agentsociety2/env/router_plan_execute.py",
+        "packages/agentsociety2/agentsociety2/env/router_react.py",
+        "packages/agentsociety2/agentsociety2/env/router_search_tool.py",
+        "packages/agentsociety2/agentsociety2/env/router_two_tier_plan_execute.py",
+        "packages/agentsociety2/agentsociety2/env/router_two_tier_react.py"
+      ],
+      "extension_commands": [
+        {
+          "command": "aiSocialScientist.initProject",
+          "title": "AI Social Scientist: Initialize Research Project",
+          "icon": "$(add)"
+        },
+        {
+          "command": "aiSocialScientist.openChat",
+          "title": "AI Social Scientist: Open AI Chat",
+          "icon": "$(comment-discussion)"
+        },
+        {
+          "command": "aiSocialScientist.selectAiChat",
+          "title": "AI Social Scientist: 选择 AI Chat 提供商",
+          "icon": "$(comment-discussion)"
+        },
+        {
+          "command": "aiSocialScientist.deleteLiterature",
+          "title": "AI Social Scientist: 删除文献",
+          "icon": "$(trash)"
+        },
+        {
+          "command": "aiSocialScientist.renameLiterature",
+          "title": "AI Social Scientist: 重命名文献",
+          "icon": "$(edit)"
+        },
+        {
+          "command": "aiSocialScientist.openTreeFileInEditor",
+          "title": "AI Social Scientist: Open in Editor",
+          "icon": "$(go-to-file)"
+        },
+        {
+          "command": "aiSocialScientist.openMarkdownInEditor",
+          "title": "AI Social Scientist: 在编辑器中打开 Markdown",
+          "icon": "$(markdown)"
+        },
+        {
+          "command": "agentsociety.viewPrefillParams",
+          "title": "AI Social Scientist: View Prefill Parameters",
+          "icon": "$(settings)"
+        },
+        {
+          "command": "aiSocialScientist.openReplay",
+          "title": "AI Social Scientist: Open Simulation Replay",
+          "icon": "$(play-circle)"
+        },
+        {
+          "command": "aiSocialScientist.startBackend",
+          "title": "AI Social Scientist: Start Backend Service",
+          "icon": "$(play)"
+        },
+        {
+          "command": "aiSocialScientist.stopBackend",
+          "title": "AI Social Scientist: Stop Backend Service",
+          "icon": "$(stop)"
+        },
+        {
+          "command": "aiSocialScientist.restartBackend",
+          "title": "AI Social Scientist: Restart Backend Service",
+          "icon": "$(refresh)"
+        },
+        {
+          "command": "aiSocialScientist.showBackendLogs",
+          "title": "AI Social Scientist: Show Backend Logs",
+          "icon": "$(output)"
+        },
+        {
+          "command": "aiSocialScientist.openConfigPage",
+          "title": "AI Social Scientist: 打开配置",
+          "icon": "$(settings)"
+        },
+        {
+          "command": "aiSocialScientist.openHelpPage",
+          "title": "AI Social Scientist: 使用指南",
+          "icon": "$(book)"
+        },
+        {
+          "command": "aiSocialScientist.openClaudeCodeConfig",
+          "title": "AI Social Scientist: Claude Code 配置（配置页）",
+          "icon": "$(key)"
+        },
+        {
+          "command": "aiSocialScientist.openWalkthrough",
+          "title": "AI Social Scientist: 打开快速入门",
+          "icon": "$(map)"
+        },
+        {
+          "command": "aiSocialScientist.openSkillMarketplace",
+          "title": "AI Social Scientist: 技能管理",
+          "icon": "$(extensions)"
+        },
+        {
+          "command": "aiSocialScientist.openSkillSourcesSettings",
+          "title": "AI Social Scientist: Agent 技能源（设置）",
+          "icon": "$(repo)"
+        },
+        {
+          "command": "aiSocialScientist.openClaudeSkillSourcesSettings",
+          "title": "AI Social Scientist: Claude 技能源（设置）",
+          "icon": "$(repo)"
+        },
+        {
+          "command": "aiSocialScientist.refreshProjectView",
+          "title": "AI Social Scientist: Refresh Project View",
+          "icon": "$(refresh)"
+        },
+        {
+          "command": "aiSocialScientist.formatJsonFile",
+          "title": "AI Social Scientist: Format and View JSON",
+          "icon": "$(json)"
+        },
+        {
+          "command": "aiSocialScientist.viewLiteratureIndex",
+          "title": "AI Social Scientist: View Literature Index",
+          "icon": "$(book)"
+        },
+        {
+          "command": "aiSocialScientist.viewStepsYaml",
+          "title": "AI Social Scientist: View Steps Timeline",
+          "icon": "$(list-ordered)"
+        },
+        {
+          "command": "aiSocialScientist.copyFilePath",
+          "title": "AI Social Scientist: 复制路径",
+          "icon": "$(copy)"
+        },
+        {
+          "command": "aiSocialScientist.copyAtReference",
+          "title": "AI Social Scientist: 复制 @引用",
+          "icon": "$(quote)"
+        },
+        {
+          "command": "aiSocialScientist.viewJsonFile",
+          "title": "AI Social Scientist: View JSON",
+          "icon": "$(json)"
+        },
+        {
+          "command": "aiSocialScientist.viewCsvFile",
+          "title": "AI Social Scientist: 表格预览 (CSV/TSV)",
+          "icon": "$(table)"
+        },
+        {
+          "command": "aiSocialScientist.viewYamlFile",
+          "title": "AI Social Scientist: View YAML",
+          "icon": "$(file-code)"
+        },
+        {
+          "command": "aiSocialScientist.viewAnalysisHarnessStatus",
+          "title": "AI Social Scientist: 分析阶段状态",
+          "icon": "$(list-tree)"
+        },
+        {
+          "command": "aiSocialScientist.openInExplorer",
+          "title": "AI Social Scientist: 在系统中打开",
+          "icon": "$(folder)"
+        },
+        {
+          "command": "aiSocialScientist.exportWorkspaceZip",
+          "title": "AI Social Scientist: 导出工作区 ZIP",
+          "icon": "$(cloud-download)"
+        }
+      ],
+      "extension_skills": [
+        "extension/skills/agentsociety-analysis/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-analysis/v1.0.0/support/frontend-design/SKILL.md",
+        "extension/skills/agentsociety-analysis/v1.0.0/support/interactive-viz/SKILL.md",
+        "extension/skills/agentsociety-analysis/v1.0.0/support/report-blocks/SKILL.md",
+        "extension/skills/agentsociety-analysis/v1.0.0/support/scientific-visualization/SKILL.md",
+        "extension/skills/agentsociety-create-agent/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-create-dataset/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-create-env-module/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-experiment-config/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-hypothesis/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-literature-search/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-paper-review/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-research-pipeline/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-run-experiment/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-scan-modules/v1.0.0/SKILL.md",
+        "extension/skills/agentsociety-use-dataset/v1.0.0/SKILL.md",
+        "extension/skills/docx/SKILL.md",
+        "extension/skills/pdf/SKILL.md",
+        "extension/skills/pptx/SKILL.md",
+        "extension/skills/xlsx/SKILL.md"
+      ],
+      "cli_declarations": [
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 785,
+          "declaration": "add_argument",
+          "args": [
+            "--config"
+          ],
+          "keywords": {
+            "type": null,
+            "required": true,
+            "help": "Path to configuration file (init_config.json)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 791,
+          "declaration": "add_argument",
+          "args": [
+            "--steps"
+          ],
+          "keywords": {
+            "type": null,
+            "required": true,
+            "help": "Path to steps.yaml file"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 797,
+          "declaration": "add_argument",
+          "args": [
+            "--run-dir"
+          ],
+          "keywords": {
+            "type": null,
+            "help": "Path to run/ directory (default: current directory)",
+            "default": "."
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 803,
+          "declaration": "add_argument",
+          "args": [
+            "--experiment-id"
+          ],
+          "keywords": {
+            "type": null,
+            "help": "Experiment ID (optional)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 808,
+          "declaration": "add_argument",
+          "args": [
+            "--log-level"
+          ],
+          "keywords": {
+            "type": null,
+            "choices": [
+              "DEBUG",
+              "INFO",
+              "WARNING",
+              "ERROR",
+              "CRITICAL"
+            ],
+            "default": "INFO",
+            "help": "Logging level (default: INFO)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 815,
+          "declaration": "add_argument",
+          "args": [
+            "--log-file"
+          ],
+          "keywords": {
+            "type": null,
+            "help": "Path to log file (optional). If not specified, logs go to stdout/stderr only."
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 820,
+          "declaration": "add_argument",
+          "args": [
+            "--replay-disable"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Disable replay writing (no-op ReplayProxy; useful at 1M-agent scale)."
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 825,
+          "declaration": "add_argument",
+          "args": [
+            "--batch-size"
+          ],
+          "keywords": {
+            "type": null,
+            "default": null,
+            "help": "Number of agents per step_agent_batch Ray Task. Tasks per tick = ceil(N / batch_size); at most AGENTSOCIETY_LLM_RAY_MAX_WORKERS run concurrently, so aim for ceil(N/batch_size) >= workers to saturate them. Default: AGENTSOCIETY_BATCH_SIZE env var, or 256."
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/cli.py",
+          "line": 836,
+          "declaration": "add_argument",
+          "args": [
+            "--resume"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Resume an interrupted run from run_dir/SOCIETY.json. Env module state and the society clock/step-count are restored; already-completed RunSteps are skipped. Ask/Intervene/Questionnaire steps re-execute (low cost; artifacts get fresh timestamps)."
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 703,
+          "declaration": "add_parser",
+          "args": [
+            "init"
+          ],
+          "keywords": {
+            "help": "Initialize workspace components"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 704,
+          "declaration": "add_argument",
+          "args": [
+            "--target-dir"
+          ],
+          "keywords": {
+            "type": null,
+            "default": ".",
+            "help": "Target workspace directory (default: current directory)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 710,
+          "declaration": "add_argument",
+          "args": [
+            "--topic"
+          ],
+          "keywords": {
+            "type": null,
+            "default": "",
+            "help": "Research topic"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 711,
+          "declaration": "add_argument",
+          "args": [
+            "--components"
+          ],
+          "keywords": {
+            "type": null,
+            "default": "custom,user_data,papers,agentsociety",
+            "help": "Components to create: custom, user_data, papers, agentsociety (default: all)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 717,
+          "declaration": "add_argument",
+          "args": [
+            "--force"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Force overwrite existing files"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 720,
+          "declaration": "add_argument",
+          "args": [
+            "--json"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Output result as JSON"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 725,
+          "declaration": "add_parser",
+          "args": [
+            "init-custom"
+          ],
+          "keywords": {
+            "help": "Initialize custom modules only"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 728,
+          "declaration": "add_argument",
+          "args": [
+            "--target-dir"
+          ],
+          "keywords": {
+            "type": null,
+            "default": ".",
+            "help": "Target workspace directory (default: current directory)"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 734,
+          "declaration": "add_argument",
+          "args": [
+            "--force"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Force overwrite existing files"
+          }
+        },
+        {
+          "source": "packages/agentsociety2/agentsociety2/society/workspace.py",
+          "line": 737,
+          "declaration": "add_argument",
+          "args": [
+            "--json"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Output result as JSON"
+          }
+        }
+      ],
+      "console_scripts": {
+        "agentsociety": "agentsociety2.society.cli:main",
+        "agentsociety-workspace": "agentsociety2.society.workspace:main"
+      }
+    },
+    {
+      "id": "matraix",
+      "repository": "https://github.com/khurramidris/MatrAIx-Persona-8B.git",
+      "commit": "3633d8dab149a9482a71b024418a49ae828cc941",
+      "verification": "clean pinned source; no engine execution performed",
+      "api_routes": [
+        {
+          "method": "GET",
+          "path": "/api/chatbot-eval/tasks",
+          "handler": "chatbot_eval_tasks",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1511
+        },
+        {
+          "method": "GET",
+          "path": "/api/chatbot-sidecars",
+          "handler": "chatbot_sidecars",
+          "source": "application/playground/backend/api/app.py",
+          "line": 641
+        },
+        {
+          "method": "POST",
+          "path": "/api/chatbot-sidecars/{application_id}/start",
+          "handler": "start_chatbot_sidecar",
+          "source": "application/playground/backend/api/app.py",
+          "line": 651
+        },
+        {
+          "method": "GET",
+          "path": "/api/config/options",
+          "handler": "config_options",
+          "source": "application/playground/backend/api/app.py",
+          "line": 672
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs",
+          "handler": "list_harbor_jobs",
+          "source": "application/playground/backend/api/app.py",
+          "line": 738
+        },
+        {
+          "method": "POST",
+          "path": "/api/harbor/jobs",
+          "handler": "launch_harbor_job",
+          "source": "application/playground/backend/api/app.py",
+          "line": 831
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/harbor/jobs/{job_name}",
+          "handler": "delete_harbor_job",
+          "source": "application/playground/backend/api/app.py",
+          "line": 815
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}",
+          "handler": "get_harbor_job",
+          "source": "application/playground/backend/api/app.py",
+          "line": 746
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/aggregation",
+          "handler": "get_harbor_job_aggregation",
+          "source": "application/playground/backend/api/app.py",
+          "line": 758
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/live",
+          "handler": "get_harbor_job_live",
+          "source": "application/playground/backend/api/app.py",
+          "line": 904
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/report.pdf",
+          "handler": "download_harbor_job_report_pdf",
+          "source": "application/playground/backend/api/app.py",
+          "line": 770
+        },
+        {
+          "method": "POST",
+          "path": "/api/harbor/jobs/{job_name}/retry-failed",
+          "handler": "retry_harbor_job_failed",
+          "source": "application/playground/backend/api/app.py",
+          "line": 917
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/status",
+          "handler": "get_harbor_job_status",
+          "source": "application/playground/backend/api/app.py",
+          "line": 931
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/debrief",
+          "handler": "get_harbor_trial_debrief",
+          "source": "application/playground/backend/api/app.py",
+          "line": 964
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/events",
+          "handler": "get_harbor_trial_events",
+          "source": "application/playground/backend/api/app.py",
+          "line": 945
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/instruction",
+          "handler": "get_harbor_trial_instruction",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1007
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/live-screenshot",
+          "handler": "get_harbor_trial_live_screenshot",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1063
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/recording",
+          "handler": "get_harbor_trial_recording",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1091
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/report.pdf",
+          "handler": "download_harbor_trial_report_pdf",
+          "source": "application/playground/backend/api/app.py",
+          "line": 978
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/screenshots/{filename:path}",
+          "handler": "get_harbor_trial_screenshot",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1037
+        },
+        {
+          "method": "GET",
+          "path": "/api/harbor/jobs/{job_name}/trials/{trial_name}/trace",
+          "handler": "get_harbor_trial_trace",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1023
+        },
+        {
+          "method": "GET",
+          "path": "/api/health",
+          "handler": "health",
+          "source": "application/playground/backend/api/app.py",
+          "line": 622
+        },
+        {
+          "method": "GET",
+          "path": "/api/os-app-eval/tasks",
+          "handler": "os_app_eval_tasks",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1533
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/catalog",
+          "handler": "get_persona_pool_catalog",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1159
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/cohorts",
+          "handler": "list_persona_cohorts",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1440
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/cohorts",
+          "handler": "save_persona_cohort",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1464
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/cohorts/{cohort_id}",
+          "handler": "get_persona_cohort",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1450
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/contrast",
+          "handler": "contrast_persona_pool",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1331
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/datasets",
+          "handler": "list_persona_datasets",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1109
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/datasets",
+          "handler": "save_persona_dataset",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1122
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/dimension-labels",
+          "handler": "get_persona_dimension_labels",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1173
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/generate",
+          "handler": "generate_persona_pool",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1255
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/ids",
+          "handler": "list_persona_pool_ids",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1145
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/match-attributes",
+          "handler": "match_persona_pool_attributes",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1190
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/personas",
+          "handler": "list_persona_pool_cards",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1351
+        },
+        {
+          "method": "GET",
+          "path": "/api/persona-pool/personas/{persona_id}",
+          "handler": "get_persona_pool_persona",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1381
+        },
+        {
+          "method": "POST",
+          "path": "/api/persona-pool/sample",
+          "handler": "sample_persona_pool",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1210
+        },
+        {
+          "method": "GET",
+          "path": "/api/playground/personas",
+          "handler": "playground_personas",
+          "source": "application/playground/backend/api/app.py",
+          "line": 681
+        },
+        {
+          "method": "GET",
+          "path": "/api/playground/personas/{persona_id}",
+          "handler": "playground_persona_detail",
+          "source": "application/playground/backend/api/app.py",
+          "line": 715
+        },
+        {
+          "method": "GET",
+          "path": "/api/preflight",
+          "handler": "preflight",
+          "source": "application/playground/backend/api/app.py",
+          "line": 629
+        },
+        {
+          "method": "GET",
+          "path": "/api/survey-eval/harbor-tasks",
+          "handler": "survey_eval_harbor_tasks",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1500
+        },
+        {
+          "method": "GET",
+          "path": "/api/survey-eval/instruments",
+          "handler": "survey_eval_instruments",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1490
+        },
+        {
+          "method": "GET",
+          "path": "/api/tasks/detail",
+          "handler": "get_task_detail",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1398
+        },
+        {
+          "method": "GET",
+          "path": "/api/tasks/persona-strategy",
+          "handler": "get_task_persona_strategy",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1416
+        },
+        {
+          "method": "GET",
+          "path": "/api/web-eval/tasks",
+          "handler": "web_eval_tasks",
+          "source": "application/playground/backend/api/app.py",
+          "line": 1522
+        }
+      ],
+      "persona_dimension_count": 1290,
+      "tasks": [
+        "application/tasks/chat_meal-planning-nutrition/task.toml",
+        "application/tasks/chat_openbb-corporate-action-honesty/task.toml",
+        "application/tasks/example-chat-api_support_chatbot/task.toml",
+        "application/tasks/example-chat-mcp_support_chatbot/task.toml",
+        "application/tasks/example-computer-use-ios_photo-access-review/task.toml",
+        "application/tasks/example-computer-use-linux_note-to-csv/task.toml",
+        "application/tasks/example-computer-use-macos_calendar-reminder-handoff/task.toml",
+        "application/tasks/example-survey_product-feedback/task.toml",
+        "application/tasks/example-web-browser-use_laptop-choice/task.toml",
+        "application/tasks/example-web-cocoa_plan-choice/task.toml",
+        "application/tasks/example-web-cua_bookshop-choice/task.toml",
+        "application/tasks/example-web-playwright_quote-choice/task.toml",
+        "application/tasks/os-app-ios_news-subscription-decision/task.toml",
+        "application/tasks/os-app-macos_stocks-mu-sentiment/task.toml",
+        "application/tasks/survey_annual-checkup-habits/task.toml",
+        "application/tasks/survey_price-sensitivity-hasbro-gaming-candy-land/task.toml",
+        "application/tasks/web_mit-ocw-course-choice/task.toml",
+        "application/tasks/web_notion-plan-comparison/task.toml"
+      ],
+      "persona_scripts": [
+        "persona/curation/attribute_pool/scripts/aggregate_candidate_pool.py",
+        "persona/curation/attribute_pool/scripts/build_acs_curated_variables.py",
+        "persona/curation/attribute_pool/scripts/build_final_merged_attributes.py",
+        "persona/curation/attribute_pool/scripts/dedup_and_categorize_candidate_pool.py",
+        "persona/curation/attribute_pool/scripts/embedding_llm_dedup_pipeline.py",
+        "persona/curation/attribute_pool/scripts/normalize_candidate_pool.py",
+        "persona/curation/attribute_pool/scripts/prepare_llm_dedup_and_graph.py",
+        "persona/curation/existing_data/scripts/__init__.py",
+        "persona/curation/existing_data/scripts/analyze_amazon_reviews_2023.py",
+        "persona/curation/existing_data/scripts/audit_wiki_results.py",
+        "persona/curation/existing_data/scripts/build_amazon_collab_db.py",
+        "persona/curation/existing_data/scripts/build_enwiki_person_dataset.py",
+        "persona/curation/existing_data/scripts/build_enwiki_qid_labels.py",
+        "persona/curation/existing_data/scripts/build_wiki_profile_db.py",
+        "persona/curation/existing_data/scripts/build_wikidata_person_attributes.py",
+        "persona/curation/existing_data/scripts/coverage_report.py",
+        "persona/curation/existing_data/scripts/crosswalk_engine.py",
+        "persona/curation/existing_data/scripts/crosswalks/__init__.py",
+        "persona/curation/existing_data/scripts/crosswalks/afrobarometer.py",
+        "persona/curation/existing_data/scripts/crosswalks/convai2.py",
+        "persona/curation/existing_data/scripts/crosswalks/gss.py",
+        "persona/curation/existing_data/scripts/crosswalks/ndhs_ph.py",
+        "persona/curation/existing_data/scripts/crosswalks/prism.py",
+        "persona/curation/existing_data/scripts/crosswalks/psa_ph.py",
+        "persona/curation/existing_data/scripts/crosswalks/wvs_ph.py",
+        "persona/curation/existing_data/scripts/derive_targets_ph.py",
+        "persona/curation/existing_data/scripts/derive_wikipedia_person_text.py",
+        "persona/curation/existing_data/scripts/enrich_prepared_amazon_product_info.py",
+        "persona/curation/existing_data/scripts/evaluate_amazon_persona_rating_holdout.py",
+        "persona/curation/existing_data/scripts/export_hf_amazon_user_histories.py",
+        "persona/curation/existing_data/scripts/extract_enwiki_pages.py",
+        "persona/curation/existing_data/scripts/fetch_amazon_reviews_2023.py",
+        "persona/curation/existing_data/scripts/fetch_sources.py",
+        "persona/curation/existing_data/scripts/fetch_wikipedia_persona_seeds.py",
+        "persona/curation/existing_data/scripts/infer_amazon_review_dimensions.py",
+        "persona/curation/existing_data/scripts/make_amazon_collab_package.py",
+        "persona/curation/existing_data/scripts/make_amazon_top_reviewer_package_manifest.py",
+        "persona/curation/existing_data/scripts/make_collab_package.py",
+        "persona/curation/existing_data/scripts/make_package.py",
+        "persona/curation/existing_data/scripts/make_wiki_assignments.py",
+        "persona/curation/existing_data/scripts/merge_collab_results.py",
+        "persona/curation/existing_data/scripts/merge_wiki_results.py",
+        "persona/curation/existing_data/scripts/microdata_to_jsonl.py",
+        "persona/curation/existing_data/scripts/postfilter_amazon_candidates.py",
+        "persona/curation/existing_data/scripts/postprocess_engine.py",
+        "persona/curation/existing_data/scripts/predict_amazon_persona_holdout_ratings.py",
+        "persona/curation/existing_data/scripts/prepare_hf_amazon_user_histories.py",
+        "persona/curation/existing_data/scripts/render_amazon_inference_report.py",
+        "persona/curation/existing_data/scripts/render_nemotron_domain_selection_plots.py",
+        "persona/curation/existing_data/scripts/retrieve_amazon_user_histories.py",
+        "persona/curation/existing_data/scripts/run_pipeline.py",
+        "persona/curation/existing_data/scripts/select_amazon_top_reviewers.py",
+        "persona/curation/existing_data/scripts/select_nemotron_survey_users.py",
+        "persona/curation/existing_data/scripts/track_amazon_top_reviewer_packages.py",
+        "persona/curation/existing_data/scripts/validate_amazon_results.py",
+        "persona/curation/existing_data/scripts/validate_wiki_results.py",
+        "persona/curation/scripts/add_bench_display_names.py",
+        "persona/existing_data_curation/scripts/__init__.py",
+        "persona/existing_data_curation/scripts/build_amazon_collab_db.py",
+        "persona/existing_data_curation/scripts/build_stackoverflow_collab_db.py",
+        "persona/existing_data_curation/scripts/build_wiki_profile_db.py",
+        "persona/existing_data_curation/scripts/export_hf_amazon_user_histories.py",
+        "persona/existing_data_curation/scripts/export_hf_stackoverflow_user_histories.py",
+        "persona/existing_data_curation/scripts/history_package_common.py",
+        "persona/existing_data_curation/scripts/infer_amazon_review_dimensions.py",
+        "persona/existing_data_curation/scripts/make_amazon_collab_package.py",
+        "persona/existing_data_curation/scripts/make_collab_package.py",
+        "persona/existing_data_curation/scripts/make_stackoverflow_collab_package.py",
+        "persona/existing_data_curation/scripts/merge_collab_results.py",
+        "persona/human_extraction/scripts/analyze_profile_lengths.py",
+        "persona/human_extraction/scripts/compare_amazon_prompts_openrouter.py",
+        "persona/human_extraction/scripts/postprocess.py",
+        "persona/human_extraction/scripts/postprocess_afrobarometer.py",
+        "persona/human_extraction/scripts/postprocess_convai2.py",
+        "persona/human_extraction/scripts/prepare_afrobarometer.py",
+        "persona/human_extraction/scripts/prepare_convai2.py",
+        "persona/human_extraction/scripts/render_prism_profiles.py",
+        "persona/human_extraction/scripts/replace_wiki_subscription_rows.py",
+        "persona/human_extraction/scripts/run_bench_extraction.py",
+        "persona/human_extraction/scripts/run_extraction.py",
+        "persona/human_extraction/scripts/run_extraction_amazon.py",
+        "persona/human_extraction/scripts/run_extraction_api.py",
+        "persona/human_extraction/scripts/run_one_amazon_openrouter.py",
+        "persona/human_extraction/scripts/score_personas.py",
+        "persona/human_extraction/scripts/validate_extraction.py",
+        "persona/scripts/augment_dev_personas_food_dims.py",
+        "persona/scripts/augment_dev_personas_full_schema.py",
+        "persona/scripts/generate_dev_personas.py",
+        "persona/scripts/generate_persona_job.py",
+        "persona/scripts/rebuild_bench_dev_from_1m.py",
+        "persona/synthesis/scripts/audit_consistency.py",
+        "persona/synthesis/scripts/audit_quality.py",
+        "persona/synthesis/scripts/decode_persona_codes.py",
+        "persona/synthesis/scripts/generate_quality_report.py",
+        "persona/synthesis/scripts/render_dag_publication.py",
+        "persona/synthesis/scripts/render_graph_visualization.py",
+        "persona/synthesis/scripts/render_persona_schema_chord.py",
+        "persona/synthesis/scripts/render_personas.py",
+        "persona/synthesis/scripts/sample_personas.py",
+        "persona/synthesis/scripts/validate_graph.py",
+        "persona/validation/scripts/build_report.py",
+        "persona/validation/scripts/decode_persona_1m.py",
+        "persona/validation/scripts/extract_subset.py",
+        "persona/validation/scripts/gen_all_tasks.py",
+        "persona/validation/scripts/gen_chat_tasks.py",
+        "persona/validation/scripts/gen_survey_tasks.py",
+        "persona/validation/scripts/judge_adherence.py",
+        "persona/validation/scripts/run_matrix.py",
+        "persona/validation/scripts/summarize_matrix.py"
+      ],
+      "persona_agent_sources": [
+        "environment/agents/matraix/agents/persona/__init__.py",
+        "environment/agents/matraix/agents/persona/browser_use.py",
+        "environment/agents/matraix/agents/persona/claude_code.py",
+        "environment/agents/matraix/agents/persona/cocoa.py",
+        "environment/agents/matraix/agents/persona/codex.py",
+        "environment/agents/matraix/agents/persona/computer_1.py",
+        "environment/agents/matraix/agents/persona/cua_submission.py",
+        "environment/agents/matraix/agents/persona/gemini_cli.py",
+        "environment/agents/matraix/agents/persona/ios_submission.py",
+        "environment/agents/matraix/agents/persona/json_survey.py",
+        "environment/agents/matraix/agents/persona/loader.py",
+        "environment/agents/matraix/agents/persona/mixin.py",
+        "environment/agents/matraix/agents/persona/openhands_sdk.py",
+        "environment/agents/matraix/agents/persona/templating.py",
+        "environment/agents/matraix/agents/persona/use_computer_cua_protocol.py",
+        "environment/agents/matraix/agents/persona/user_sim.py"
+      ],
+      "runtime_environment_sources": [
+        "environment/runtime/harbor/environments/apple_container.py",
+        "environment/runtime/harbor/environments/base.py",
+        "environment/runtime/harbor/environments/capabilities.py",
+        "environment/runtime/harbor/environments/compose_materialize.py",
+        "environment/runtime/harbor/environments/compose_service_ops.py",
+        "environment/runtime/harbor/environments/cwsandbox.py",
+        "environment/runtime/harbor/environments/daytona/__init__.py",
+        "environment/runtime/harbor/environments/daytona/environment.py",
+        "environment/runtime/harbor/environments/daytona/snapshots.py",
+        "environment/runtime/harbor/environments/daytona/utils.py",
+        "environment/runtime/harbor/environments/definition.py",
+        "environment/runtime/harbor/environments/docker/__init__.py",
+        "environment/runtime/harbor/environments/docker/compose_env.py",
+        "environment/runtime/harbor/environments/docker/docker.py",
+        "environment/runtime/harbor/environments/docker/docker_unix.py",
+        "environment/runtime/harbor/environments/docker/docker_windows.py",
+        "environment/runtime/harbor/environments/e2b.py",
+        "environment/runtime/harbor/environments/factory.py",
+        "environment/runtime/harbor/environments/gke.py",
+        "environment/runtime/harbor/environments/host.py",
+        "environment/runtime/harbor/environments/islo.py",
+        "environment/runtime/harbor/environments/langsmith.py",
+        "environment/runtime/harbor/environments/modal.py",
+        "environment/runtime/harbor/environments/novita.py",
+        "environment/runtime/harbor/environments/resource_policies.py",
+        "environment/runtime/harbor/environments/runloop.py",
+        "environment/runtime/harbor/environments/singularity/__init__.py",
+        "environment/runtime/harbor/environments/singularity/server.py",
+        "environment/runtime/harbor/environments/singularity/singularity.py",
+        "environment/runtime/harbor/environments/tar_transfer.py",
+        "environment/runtime/harbor/environments/tensorlake.py",
+        "environment/runtime/harbor/environments/use_computer.py",
+        "environment/runtime/harbor/environments/wandb.py"
+      ],
+      "cli_declarations": [
+        {
+          "source": "environment/runtime/harbor/cli/adapters.py",
+          "line": 13,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/adapters.py",
+          "line": 65,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/admin/admin.py",
+          "line": 25,
+          "declaration": "command",
+          "args": [
+            "upload-images"
+          ],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/auth.py",
+          "line": 13,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/auth.py",
+          "line": 53,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/auth.py",
+          "line": 67,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/cache.py",
+          "line": 15,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/datasets.py",
+          "line": 16,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "list"
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/datasets.py",
+          "line": 123,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/datasets.py",
+          "line": 155,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/datasets.py",
+          "line": 260,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/jobs.py",
+          "line": 1483,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/jobs.py",
+          "line": 1658,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/jobs.py",
+          "line": 1679,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/jobs.py",
+          "line": 1764,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/jobs.py",
+          "line": 1841,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/leaderboard.py",
+          "line": 42,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "submit"
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 51,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "adapter",
+            "help": "Manage adapters."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 52,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "task",
+            "help": "Manage tasks."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 53,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "dataset",
+            "help": "Manage datasets."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 54,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "job",
+            "help": "Manage jobs."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 55,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "trial",
+            "help": "Manage trials."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 56,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "cache",
+            "help": "Manage Harbor cache."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 57,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "plugins",
+            "help": "Manage job plugins."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 58,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "auth",
+            "help": "Manage authentication."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 59,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "leaderboard",
+            "help": "Manage leaderboards."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 66,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "adapters",
+            "help": "Manage adapters.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 67,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "tasks",
+            "help": "Manage tasks.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 68,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "datasets",
+            "help": "Manage datasets.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 69,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "jobs",
+            "help": "Manage jobs.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 70,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "trials",
+            "help": "Manage trials.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 73,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "traces",
+            "help": "Trace export utilities.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 74,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "sweeps",
+            "help": "Run successive sweeps to focus on successes.",
+            "hidden": true
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 80,
+          "declaration": "add_typer",
+          "args": [
+            null
+          ],
+          "keywords": {
+            "name": "admin"
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 81,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "check",
+            "help": "Check task quality against a rubric."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 82,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "analyze",
+            "help": "Analyze trial trajectories."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 84,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "init",
+            "help": "Initialize a new task or dataset."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 85,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "run",
+            "help": "Start a job. Alias for `harbor job start`."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 86,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "publish",
+            "help": "Publish tasks and datasets to the Harbor registry."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 89,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "upload",
+            "help": "Upload job results to the Harbor platform."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 92,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "add",
+            "help": "Add tasks or datasets to a dataset.toml."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 93,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "download",
+            "help": "Download a task or dataset."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 94,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "remove",
+            "help": "Remove tasks from a dataset.toml."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 95,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "sync",
+            "help": "Update task digests in a dataset manifest."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/main.py",
+          "line": 98,
+          "declaration": "command",
+          "args": [],
+          "keywords": {
+            "name": "view",
+            "help": "Start web server to browse trajectory files."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/plugins_cmd.py",
+          "line": 16,
+          "declaration": "command",
+          "args": [
+            "list"
+          ],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/sweeps.py",
+          "line": 23,
+          "declaration": "command",
+          "args": [
+            "run"
+          ],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 50,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 134,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 212,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 450,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 465,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 545,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 646,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 729,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/tasks.py",
+          "line": 796,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/template-metric/metric.py",
+          "line": 32,
+          "declaration": "add_argument",
+          "args": [
+            "-i",
+            "--input-path"
+          ],
+          "keywords": {
+            "type": null,
+            "required": true,
+            "help": "Path to a jsonl file containing rewards, one json object per line."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/template-metric/metric.py",
+          "line": 39,
+          "declaration": "add_argument",
+          "args": [
+            "-o",
+            "--output-path"
+          ],
+          "keywords": {
+            "type": null,
+            "required": true,
+            "help": "Path to a json file where the metric will be written as a json object."
+          }
+        },
+        {
+          "source": "environment/runtime/harbor/cli/traces.py",
+          "line": 11,
+          "declaration": "command",
+          "args": [
+            "export"
+          ],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/trials.py",
+          "line": 30,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/trials.py",
+          "line": 582,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "environment/runtime/harbor/cli/trials.py",
+          "line": 603,
+          "declaration": "command",
+          "args": [],
+          "keywords": {}
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 288,
+          "declaration": "add_parser",
+          "args": [
+            "run"
+          ],
+          "keywords": {
+            "help": "Run a job with the complete MatrAIx launch environment.",
+            "description": "Runs a generated job YAML. Local recipes wrap `harbor run` with the same PYTHONPATH and MATRIX_* exports Playground injects. Modal / GKE recipes (sidecar computeFamily, or --compute-family) use HarborJobService — the same path as Playground / POST /api/harbor/jobs. Ad-hoc arguments (e.g. -p/-a) still pass through to harbor run."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 299,
+          "declaration": "add_argument",
+          "args": [
+            "-c",
+            "--config"
+          ],
+          "keywords": {
+            "dest": "config_opt",
+            "default": null,
+            "help": "Path to a generated job YAML (may also be passed positionally)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 306,
+          "declaration": "add_argument",
+          "args": [
+            "--repo-root"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "MatrAIx repository root (default: discovered from the config path)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 311,
+          "declaration": "add_argument",
+          "args": [
+            "--max-cost-usd"
+          ],
+          "keywords": {
+            "type": null,
+            "default": null,
+            "help": "Hard job spend gate for Survey/Chat paths that honor MATRIX_MAX_COST_USD. Further provider requests are refused once recorded spend meets this limit. Web/OS agents already report tokens/cost via their runtimes; this gate applies to host-native Survey/Chat today."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 323,
+          "declaration": "add_argument",
+          "args": [
+            "--compute-family"
+          ],
+          "keywords": {
+            "choices": [
+              "local",
+              "modal",
+              "gcp"
+            ],
+            "default": null,
+            "help": "Where trials run (same as Playground computeFamily). Default: sidecar computeFamily, then MATRIX_COMPUTE_FAMILY, then local. modal/gcp dispatch through HarborJobService."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 333,
+          "declaration": "add_argument",
+          "args": [
+            "--plane"
+          ],
+          "keywords": {
+            "choices": [
+              "harbor",
+              "remote"
+            ],
+            "default": null,
+            "help": "Who starts Harbor on Playground dispatch (same as Playground plane). Default: MATRIX_EXECUTION_PLANE or harbor. Ignored for local harbor run."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 343,
+          "declaration": "add_parser",
+          "args": [
+            "results"
+          ],
+          "keywords": {
+            "help": "Summarize and export a finished job without another LLM call.",
+            "description": "Deterministic job ledger + type-aware outcome lens for Survey, Chat, Web, and OS-app jobs. Reads jobs/<job>/ result.json, verifier/structured_output.json, and known artifacts. Default path never calls another model. Use --format json,csv for export."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 353,
+          "declaration": "add_argument",
+          "args": [
+            "job"
+          ],
+          "keywords": {
+            "help": "Job name under jobs/ or a path to a job directory"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 357,
+          "declaration": "add_argument",
+          "args": [
+            "--format"
+          ],
+          "keywords": {
+            "default": "text",
+            "help": "Comma-separated formats: text,json,csv (default: text)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 362,
+          "declaration": "add_argument",
+          "args": [
+            "--group-by"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "Comma-separated persona fields for cuts (e.g. life_stage). Reads persona_meta / persona YAML dimensions."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 370,
+          "declaration": "add_argument",
+          "args": [
+            "-o",
+            "--output"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "Write export(s) to a file (single format) or directory (multiple formats). Use - for stdout."
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 379,
+          "declaration": "add_argument",
+          "args": [
+            "--repo-root"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "MatrAIx repository root (default: discovered from cwd)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 385,
+          "declaration": "add_parser",
+          "args": [
+            "smoke"
+          ],
+          "keywords": {
+            "help": "Zero-cost host Survey check (no Docker, no API key).",
+            "description": "Host-lane onboarding smoke for Survey / json_survey. Loads the questionnaire, renders a persona, runs the real survey runner with a deterministic fake client, and checks the answer envelope. Does not call a provider and does not require Docker. For Docker/Harbor stack smoke use: matraix run -c configs/jobs/example-job-recipe/harbor-smoke-local.yaml"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 397,
+          "declaration": "add_argument",
+          "args": [
+            "task"
+          ],
+          "keywords": {
+            "help": "Survey task directory (e.g. application/tasks/example-survey_product-feedback)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 401,
+          "declaration": "add_argument",
+          "args": [
+            "--personas"
+          ],
+          "keywords": {
+            "type": null,
+            "default": 1,
+            "help": "Number of personas from the dev sample (default: 1 = persona_0042)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 407,
+          "declaration": "add_argument",
+          "args": [
+            "--persona"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "Optional persona YAML path (overrides --personas sampling)"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 412,
+          "declaration": "add_argument",
+          "args": [
+            "--keep-artifacts"
+          ],
+          "keywords": {
+            "action": "store_true",
+            "help": "Keep temp survey_result.json artifacts after a successful smoke"
+          }
+        },
+        {
+          "source": "src/matraix/cli.py",
+          "line": 417,
+          "declaration": "add_argument",
+          "args": [
+            "--repo-root"
+          ],
+          "keywords": {
+            "default": null,
+            "help": "MatrAIx repository root (default: discovered from cwd)"
+          }
+        }
+      ],
+      "console_scripts": {
+        "harbor": "harbor.cli.main:app",
+        "hr": "harbor.cli.main:app",
+        "hb": "harbor.cli.main:app",
+        "matraix": "matraix.cli:main"
+      }
+    }
+  ]
+}

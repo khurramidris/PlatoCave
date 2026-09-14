@@ -1,0 +1,12 @@
+engines/
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+!.env.example
+runtime/
+jobs/
+dist/
+.pytest_cache/
